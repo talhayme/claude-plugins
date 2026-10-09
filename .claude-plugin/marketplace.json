@@ -1,0 +1,16 @@
+{
+  "name": "talhayme",
+  "owner": {
+    "name": "Vitalii Bogachev",
+    "url": "https://github.com/talhayme"
+  },
+  "plugins": [
+    {
+      "name": "context-audit",
+      "source": "./plugins/context-audit",
+      "displayName": "Context Audit",
+      "description": "Measure what installed skills cost in context on every request; find truncated, undescribed and overlapping ones.",
+      "version": "0.1.0"
+    }
+  ]
+}

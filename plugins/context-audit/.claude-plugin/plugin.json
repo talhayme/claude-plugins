@@ -1,0 +1,14 @@
+{
+  "name": "context-audit",
+  "displayName": "Context Audit",
+  "version": "0.1.0",
+  "description": "Measure what your installed skills and plugins cost in context on every request, and find the truncated, undescribed and overlapping ones wasting it.",
+  "author": {
+    "name": "Vitalii Bogachev",
+    "url": "https://github.com/talhayme"
+  },
+  "homepage": "https://github.com/talhayme/context-audit",
+  "repository": "https://github.com/talhayme/context-audit",
+  "license": "MIT",
+  "keywords": ["context", "tokens", "skills", "plugins", "audit", "cost"]
+}
