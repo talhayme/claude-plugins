@@ -33,6 +33,23 @@ Runs offline, read-only, no dependencies. Ships an eval suite.
 /context-audit --budget 4000
 ```
 
+### [eval-drift](plugins/eval-drift)
+
+Per-case regression detection for `claude plugin eval`. The built-in eval
+scores a run but has no memory of the last one, so a change that fixes two
+cases and breaks one lifts the average and ships the break. This records a
+baseline and blocks any case that passed before and fails now — independent
+of the average. Also separates flaky cases from real regressions, because a
+flaky pass is noise, not evidence.
+
+Reads the `--json` result the built-in tool already produces. No model
+calls, no network. 26 tests.
+
+```
+claude plugin eval . --json result.json --no-publish
+python3 scripts/drift.py result.json          # exit 1 on regression
+```
+
 ## Building on these
 
 Every plugin here ships `evals/` and passes `claude plugin validate --strict`.

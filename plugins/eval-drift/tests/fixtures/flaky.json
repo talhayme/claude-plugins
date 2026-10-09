@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.293",
+  "partial": false,
+  "partialReason": null,
+  "suite": {
+    "threshold": 1.0,
+    "ablation": "with-without"
+  },
+  "cases": [
+    {
+      "name": "reports-total",
+      "aggregates": {
+        "score": 1.0
+      },
+      "arms": {
+        "with": [
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          }
+        ],
+        "without": []
+      }
+    },
+    {
+      "name": "finds-duplicates",
+      "aggregates": {
+        "score": 0.67
+      },
+      "arms": {
+        "with": [
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          }
+        ],
+        "without": []
+      }
+    },
+    {
+      "name": "handles-empty",
+      "aggregates": {
+        "score": 1.0
+      },
+      "arms": {
+        "with": [
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          }
+        ],
+        "without": []
+      }
+    }
+  ],
+  "aggregates": {
+    "overallScore": 0.89,
+    "casesTotal": 3
+  },
+  "costUsd": 0.41,
+  "durationSeconds": 74
+}

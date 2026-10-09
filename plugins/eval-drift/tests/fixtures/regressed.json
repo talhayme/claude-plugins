@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.293",
+  "partial": false,
+  "partialReason": null,
+  "suite": {
+    "threshold": 1.0,
+    "ablation": "with-without"
+  },
+  "cases": [
+    {
+      "name": "reports-total",
+      "aggregates": {
+        "score": 1.0,
+        "delta": 0.67
+      },
+      "arms": {
+        "with": [
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          }
+        ],
+        "without": []
+      }
+    },
+    {
+      "name": "finds-duplicates",
+      "aggregates": {
+        "score": 0.0
+      },
+      "arms": {
+        "with": [
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": false
+              },
+              {
+                "name": "skill-fired",
+                "type": "regex",
+                "pass": false
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": false
+              },
+              {
+                "name": "skill-fired",
+                "type": "regex",
+                "pass": false
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": false
+              },
+              {
+                "name": "skill-fired",
+                "type": "regex",
+                "pass": false
+              }
+            ]
+          }
+        ],
+        "without": []
+      }
+    },
+    {
+      "name": "handles-empty",
+      "aggregates": {
+        "score": 1.0
+      },
+      "arms": {
+        "with": [
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          }
+        ],
+        "without": []
+      }
+    },
+    {
+      "name": "brand-new-case",
+      "aggregates": {
+        "score": 1.0
+      },
+      "arms": {
+        "with": [
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          },
+          {
+            "error": null,
+            "graders": [
+              {
+                "name": "criteria",
+                "type": "llm",
+                "pass": true
+              }
+            ]
+          }
+        ],
+        "without": []
+      }
+    }
+  ],
+  "aggregates": {
+    "overallScore": 0.75,
+    "casesTotal": 4
+  },
+  "costUsd": 0.41,
+  "durationSeconds": 74
+}

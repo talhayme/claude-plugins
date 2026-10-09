@@ -11,6 +11,13 @@
       "displayName": "Context Audit",
       "description": "Measure what installed skills cost in context on every request; find truncated, undescribed and overlapping ones.",
       "version": "0.1.0"
+    },
+    {
+      "name": "eval-drift",
+      "source": "./plugins/eval-drift",
+      "displayName": "Eval Drift",
+      "description": "Per-case regression detection for claude plugin eval: records a baseline and blocks any pass-to-fail flip, independent of the suite average.",
+      "version": "0.1.0"
     }
   ]
 }
