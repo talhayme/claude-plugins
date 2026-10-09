@@ -18,6 +18,13 @@
       "displayName": "Eval Drift",
       "description": "Per-case regression detection for claude plugin eval: records a baseline and blocks any pass-to-fail flip, independent of the suite average.",
       "version": "0.1.0"
+    },
+    {
+      "name": "injection-probe",
+      "source": "./plugins/injection-probe",
+      "displayName": "Injection Probe",
+      "description": "Test whether hidden prompt injection in a document survives your pipeline's text extraction and reaches the model.",
+      "version": "0.1.0"
     }
   ]
 }

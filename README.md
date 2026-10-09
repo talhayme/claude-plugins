@@ -50,6 +50,19 @@ claude plugin eval . --json result.json --no-publish
 python3 scripts/drift.py result.json          # exit 1 on regression
 ```
 
+### [injection-probe](plugins/injection-probe)
+
+Tests whether hidden prompt injection in a document survives your pipeline's
+text extraction. Scanners ask "does this file contain hidden text"; this asks
+whether *your* extractor hands that hidden text to the model. Builds documents
+with white text, invisible render mode, tiny fonts, off-page text, the Word
+vanish flag and CSS `display:none` across PDF/DOCX/EPUB, runs them through
+your extractor, and reports what survived. 19 tests.
+
+```
+python3 scripts/probe.py --extractor "python3 extract.py {}" --fail-on-exposure
+```
+
 ## Building on these
 
 Every plugin here ships `evals/` and passes `claude plugin validate --strict`.
