@@ -8,8 +8,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import carriers  # noqa: E402
 import probe  # noqa: E402
 
-PDF = pytest.importorskip("fitz")
-DOCX = pytest.importorskip("docx")
+import os
+
+# Locally, missing extractors skip the suite. In CI they fail it: a green run
+# that tested nothing is the exact failure mode this plugin exists to catch.
+if os.environ.get("CI"):
+    import fitz as PDF  # noqa: N812
+    import docx as DOCX  # noqa: N812
+else:
+    PDF = pytest.importorskip("fitz")
+    DOCX = pytest.importorskip("docx")
 
 
 @pytest.fixture

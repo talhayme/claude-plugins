@@ -1,0 +1,19 @@
+name: tests
+on:
+  push: { branches: [main] }
+  pull_request:
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        plugin: [eval-drift, injection-probe]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with: { python-version: "3.12" }
+      # injection-probe's tests need the real extractors; without them the
+      # suite would skip itself and CI would be green while testing nothing.
+      - run: python -m pip install pytest pymupdf python-docx
+      - run: pytest -q plugins/${{ matrix.plugin }}/tests
+        env: { CI: "true" }
