@@ -25,6 +25,25 @@
       "displayName": "Injection Probe",
       "description": "Test whether hidden prompt injection in a document survives your pipeline's text extraction and reaches the model.",
       "version": "0.1.0"
+    },
+    {
+      "name": "pr-witness",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/talhayme/pr-witness.git",
+        "path": "claude-plugin",
+        "ref": "main"
+      },
+      "displayName": "pr-witness",
+      "description": "Asks before a test file is edited or removed; when the agent says the tests pass, runs the base branch's tests against the working tree and shows any claim the run contradicts. Advisory \u2014 the signed CI report is the proof.",
+      "version": "0.1.0",
+      "category": "testing",
+      "tags": [
+        "tests",
+        "ci",
+        "verification",
+        "agents"
+      ]
     }
   ]
 }
